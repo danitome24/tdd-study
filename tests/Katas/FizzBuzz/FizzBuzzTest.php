@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class FizzBuzzTest extends TestCase {
     /** @test */
-    public function canInstantiateFizzBuzz() {
-        $this->assertTrue(class_exists(FizzBuzz::class), 'Class FizzBuzz does not exists yet.');
+    public function canCallGenerateMethod() {
+        $this->assertTrue(method_exists(FizzBuzz::class, 'generate'), 'Method generate does not exists yet.');
     }
 }
