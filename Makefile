@@ -31,3 +31,6 @@ cli: ## Goes to shell inside container.
 
 test: ## Runs all unit tests.
 	@docker-compose run --rm php composer run-script test
+
+start:
+	@docker-compose start
