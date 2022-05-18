@@ -15,9 +15,9 @@ class FizzBuzzTest extends TestCase {
     }
 
     /** @test */
-    public function numberOneIsRepresentedAsItself() {
-        $number = 1;
-        $this->assertNumberIsRepresentedAsItself($number, '1');
+    public function numberIsRepresentedAsItself() {
+        $this->assertNumberIsRepresentedAsItself(1, '1');
+        $this->assertNumberIsRepresentedAsItself(2, '2');
     }
 
     private function assertNumberIsRepresentedAsItself(int $number, string $representation): void {
