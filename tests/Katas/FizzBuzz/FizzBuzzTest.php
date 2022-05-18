@@ -6,8 +6,11 @@ use App\FizzBuzz\FizzBuzz;
 use PHPUnit\Framework\TestCase;
 
 class FizzBuzzTest extends TestCase {
+    const NUMBER_OF_ELEMENTS = 100;
+
     /** @test */
-    public function canCallGenerateMethod() {
-        $this->assertTrue(method_exists(FizzBuzz::class, 'generate'), 'Method generate does not exists yet.');
+    public function generateShouldReturnFixedNumberOfElements() {
+        $fizzBuzz = new FizzBuzz();
+        $this->assertCount(self::NUMBER_OF_ELEMENTS, $fizzBuzz->generate());
     }
 }
