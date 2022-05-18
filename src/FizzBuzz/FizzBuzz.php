@@ -6,13 +6,15 @@ class FizzBuzz {
     const NUMBER_OF_ELEMENTS = 100;
 
     public function generate(): array {
-        $numberList = range(1, self::NUMBER_OF_ELEMENTS);
-
-        foreach ($numberList as $num) {
+        $representations = [];
+        foreach (range(1, self::NUMBER_OF_ELEMENTS) as $num) {
             $representation = (string) $num;
-            $numberList[$num - 1] = $representation;
+            if ($num % 3 == 0) {
+                $representation = 'Fizz';
+            }
+            $representations[] = $representation;
         }
 
-        return $numberList;
+        return $representations;
     }
 }

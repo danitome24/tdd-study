@@ -25,4 +25,10 @@ class FizzBuzzTest extends TestCase {
         $numberList = $fizzBuzz->generate();
         $this->assertEquals($representation, $numberList[$number - 1]);
     }
+
+    /** @test */
+    public function threeAndMultiplesAreRepresentedAsFizz() {
+        $this->assertNumberIsRepresentedAsItself(3, 'Fizz');
+        $this->assertNumberIsRepresentedAsItself(6, 'Fizz');
+    }
 }
