@@ -31,4 +31,16 @@ class FizzBuzzTest extends TestCase {
         $this->assertNumberIsRepresentedAsItself(3, 'Fizz');
         $this->assertNumberIsRepresentedAsItself(6, 'Fizz');
     }
+
+    /** @test */
+    public function fiveAndMultiplesAreRepresentedAsBuzz() {
+        $this->assertNumberIsRepresentedAsItself(5, 'Buzz');
+        $this->assertNumberIsRepresentedAsItself(10, 'Buzz');
+    }
+
+    /** @test */
+    public function fifteenAndMultiplesAreRepresentedAsFizzBuzz() {
+        $this->assertNumberIsRepresentedAsItself(15, 'FizzBuzz');
+        $this->assertNumberIsRepresentedAsItself(30, 'FizzBuzz');
+    }
 }
